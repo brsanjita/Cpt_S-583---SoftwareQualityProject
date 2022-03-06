@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Reserve Parking</h3>
+    <div class="box">
+        <form method="POST" action="/reserve">
+            <label for="name">Full Name</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="name" placeholder="Full Name" autofocus="">
+                </div>
+            </div>
+            <label for="parking_spot_number">Parking Spot number</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="parking_spot_number" placeholder="Parking Spot number" autofocus="">
+                </div>
+            </div>
+            <label for="Parking_start_datetime">Start</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="datetime-local" name="Parking_start_datetime" placeholder="Start" autofocus="">
+                </div>
+            </div>
+            <label for="Parking_end_datetime">End</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="datetime-local" name="Parking_end_datetime" placeholder="End" autofocus="">
+                </div>
+            </div>
+            
+            <button class="button is-block is-info is-large is-fullwidth">Reserve</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

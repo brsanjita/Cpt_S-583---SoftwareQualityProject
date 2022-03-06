@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Sign Up</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}<br> Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+                </div>
+            {% endif %}
+        {% endwith %}
+    
+        <form method="POST" action="/signup">
+            <label for="name">Full Name</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="name" placeholder="Full Name" autofocus="">
+                </div>
+            </div>
+            <label for="email">Email ID</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email ID" autofocus="">
+                </div>
+            </div>
+            <label for="password">Password</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <label for="phone">Contact Number</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="phone" placeholder="Contact Number">
+                </div>
+            </div>
+            <label for="driving_license_number">DL Number</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="driving_license_number" placeholder="DL Number">
+                </div>
+            </div>
+            <label for="license_plate_number">License Plate Number</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="license_plate_number" placeholder="License Plate Number">
+                </div>
+            </div>
+            <label for="D_O_B">Birth Date</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" placeholder="Birth Date" type="date" name="D_O_B">                
+            </div>
+            <label for="card_number">Credit/Debit Card Number</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="card_number" placeholder="Credit/Debit Card Number">
+                </div>
+            </div>
+            <label for="card_expiry">Card Expiry</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" placeholder="Card Expiry" type="date" name="card_expiry">                
+            </div>
+            <label for="cvv">Security Code</label>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="cvv" placeholder="Security Code">
+                </div>
+            </div>
+            
+            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
