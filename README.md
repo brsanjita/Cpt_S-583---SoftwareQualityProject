@@ -15,6 +15,12 @@ Rushabh Shah
 <br/> Alaleh Ahmadianshalchi
 
 
+Software used:
+Python Flask 
+HTML 
+Javascript
+SQLite : Database
+
 Install python packages
 Install all python packages using the following command : pip install -r requirements.txt
 
